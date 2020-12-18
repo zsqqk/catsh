@@ -14,4 +14,4 @@ source /etc/profile
 
 echo $JAVA_HOME
 
-exit
+source /etc/profile
