@@ -1,21 +1,6 @@
 #!/bin/bash
-#AWS装机
-
-#update
-sudo su root
-yum update
-yum install -y wget
-yum install -y ntpdate
-yum install -y unzip
-
-#Change time zone
-timedatectl set-timezone Asia/Shanghai
-timedatectl set-ntp yes
-timedatectl set-local-rtc 1
-hwclock --systohc
-
-#whale
-adduser whale
+#jdk1.8解除限制
+#@clear
 
 #install java
 cd /usr/local/
@@ -26,4 +11,7 @@ echo 'export JAVA_HOME=/usr/local/jdk1.8.0_261'>>/etc/profile
 echo 'export CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH'>>/etc/profile
 echo 'export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH'>>/etc/profile
 source /etc/profile
+
+echo $JAVA_HOME
+
 exit
